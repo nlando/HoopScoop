@@ -1,0 +1,532 @@
+@media screen and (min-width: 200px) {
+  html, body {
+    margin: 0;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overscroll-behavior: none;
+  }
+
+  .page{
+    scroll-snap-align:start;
+  }
+
+  .border {
+    border: 1px solid rgb(65, 62, 61);
+    border-radius: 15px;
+  }
+
+  .gray-btn {
+    display: block;
+    margin: 20px auto;
+    background-color: rgb(65, 62, 61);
+    color: white;
+    width: 105px;
+    height: 30px;
+    border: 1px solid rgb(65, 62, 61);
+    font-size: 15px;
+  }
+
+  .orange-btn {
+    display: block;
+    margin: 20px auto;
+    background-color: rgb(246, 99, 53);
+    color: rgb(65, 62, 61);
+    width: 105px;
+    height: 30px;
+    border: 1px solid rgb(65, 62, 61);
+    font-size: 15px;
+  }
+
+  #menu-hamburger {
+    position: absolute;
+    top: 15px;
+    left: 8vw;
+    cursor: pointer;
+    width: 10vw;
+    height: 15vh;
+  }
+
+  #nav-bar {
+    display: none;
+  }
+
+  #lander-header {
+    background-color: rgb(246, 99, 53);
+    color: rgb(65, 62, 61);
+    height: 82vh;
+    width: 100vw;
+    text-align: center;
+    padding-top: 30%;
+  }
+
+  #lander-title {
+    text-transform: uppercase;
+    font-size: 50px;
+    width: 60vw;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, .87);
+    border-radius: 8px;
+  }
+
+  #basketball-icon {
+    height: 20%;
+    margin: 10%;
+  }
+
+  #lander-subtitle {
+    margin: 5% auto;
+    font-size: 25px;
+    width: 60%;
+    background-color: rgba(255, 255, 255, .87);
+    border-radius: 8px;
+  }
+
+  #hoop-photo {
+    display: none;
+  }
+
+  #nav-overlay {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(74, 74, 79, .7);
+    display: none;
+  }
+
+  #nav-page {
+    height: 60vh;
+    width: 70vw;
+    margin-top: 10%;
+    background-color: rgb(175, 175, 175);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 14px;
+    display: none;
+  }
+
+  #nav-page-title {
+    width: 80%;
+    margin: 15% auto;
+    padding-top: 12%;
+    color: rgb(65, 62, 61);
+    font-size: 35px;
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+  #nav-btns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #nav-btns button {
+    margin: 0 auto;
+    margin-bottom: 15px;
+    height: 45px;
+    width: 65%;
+    color: rgb(65, 62, 61);
+    background-color: rgb(246, 99, 53);
+    font-size: 20px;
+  }
+
+  #nav-btns button:hover {
+    cursor: pointer;
+  }
+
+  #find-page {
+    background-color: rgba(230, 230, 230, .87);
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+  }
+
+  #find-page-title {
+    width: 80%;
+    margin: 0 auto;
+    color: rgb(65, 62, 61);
+    font-size: 35px;
+    position: relative;
+    top: 8%;
+    text-align: center;
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+  #hoop-map {
+    height: 50%;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    top: 15%;
+    background-image: url(<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d881124.6673036523!2d-123.06789959868236!3d37.860113091996986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808583a3a688d7b5%3A0x8c891b8457461fa9!2sSan%20Francisco%20Bay%20Area%2C%20CA!5e0!3m2!1sen!2sus!4v1588375668108!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>)
+    /* background-image: url("../images/bay-area.png"); */
+    background-size: cover;
+    border-radius: 15px;
+  }
+
+  #find-results {
+    width: 85%;
+    background-color: white;
+    margin: 30% auto;
+  }
+
+  #find-results ul li {
+    list-style: none;
+    margin-left: -30px;
+    font-size: 25px;
+    color: rgb(65, 62, 61);
+  }
+
+  #review-page {
+    background-color: rgb(246, 99, 53);
+    color: rgb(65, 62, 61);
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+  }
+
+  #review-page-title {
+    width: 80%;
+    margin: 0 auto;
+    color: rgb(65, 62, 61);
+    font-size: 35px;
+    position: relative;
+    top: 8%;
+    text-align: center;
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+  #review-header {
+    padding-top: 8vh;
+  }
+
+  #review-search {
+    width: 75%;
+    height: 30px;
+    font-size: 15px;
+    padding: 0px 13px;
+  }
+
+  #search-review-btn:hover {
+    cursor: pointer;
+  }
+
+  #review-park-name {
+    background-color: white;
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 30px;
+    font-style: italic;
+  }
+
+  .user-input {
+    width: 80%;
+    background-color: white;
+    margin: 15px auto;
+    padding: 15px 25px;
+  }
+
+  #add-review-btn {
+    margin-top: 10%;
+  }
+
+  #add-review-btn:hover {
+    cursor: pointer;
+  }
+
+  #add-page {
+    background-color: rgba(230, 230, 230, .87);
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    color: rgb(65, 62, 61);
+  }
+
+  #add-page-title {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    color: rgb(65, 62, 61);
+    font-size: 35px;
+    position: relative;
+    top: 8%;
+    text-align: center;
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+  #add-page-subtitle {
+    padding-bottom: 16%;
+  }
+
+  .add-hoop-info {
+    width: 75%;
+    height: 50px;
+    font-size: 15px;
+    padding: 0px 13px;
+    margin-top: 7px;
+  }
+
+  #final-add-hoop-btn:hover {
+    cursor: pointer;
+  }
+
+  #footer {
+    height: 25vh;
+    width: 100vw;
+    background-color: rgb(246, 99, 53);
+  }
+
+  .socialIcons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .icons {
+    height: 30px;
+    width: 30px;
+    margin: 25px 20px 5px;
+  }
+
+  #emailInput input {
+    height: 33px;
+    width: 50%;
+    border: none;
+    border-radius: 1px;
+    margin-left: 10%;
+  }
+
+  #emailInput input::placeholder {
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(65, 62, 61);
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  #emailInput button {
+    display: inline;
+    margin-left: 5%;
+  }
+
+#email-btn:hover{
+  cursor: pointer;
+}
+
+  .copyright {
+    font-family: Lato;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(65, 62, 61);
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+
+  #hoop-map {
+    margin-bottom: -10%;
+  }
+
+  .copyright {
+    font-family: Lato;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(79, 74, 72);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #menu-hamburger {
+    display: none;
+  }
+
+  #nav-bar {
+    display: block;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    height: 7vh;
+    width: 100vw;
+    z-index: 100;
+  }
+
+  #lander-header {
+    height: 49vh;
+  }
+
+  #lander-title {
+    position: relative;
+    top: -50%;
+    right: 18%;
+    width: 40%;
+    z-index: 1;
+  }
+
+  #basketball-icon {
+    display: none;
+  }
+
+  #lander-subtitle {
+    position: relative;
+    top: -50%;
+    right: 10%;
+    width: 20%;
+    z-index: 1;
+  }
+
+  #hoop-photo {
+    display: block;
+    width: 50%;
+    border-radius: 10px;
+    position: absolute;
+    right: 10%;
+    top: 20%;
+  }
+
+  #nav-page {
+    display: none;
+  }
+
+  #nav-items {
+    display: flex;
+    width: 100vw;
+    height: 100%
+  }
+
+  #nav-items ul li:hover {
+    cursor: pointer;
+  }
+
+  #nav-content {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+  }
+
+  #nav-contact {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    justify-content: flex-end;
+  }
+
+  #hoop-map {
+    height: 50%;
+    width: 60%;
+    position: relative;
+    top: 15%;
+    margin-bottom: 15%;
+  }
+
+  #find-results {
+    width: 65%;
+    background-color: white;
+    margin: 10% auto;
+  }
+
+  #find-results ul li {
+    list-style: none;
+    margin-left: -30px;
+    font-size: 25px;
+    color: rgb(65, 62, 61);
+  }
+
+  #review-search {
+    width: 40%;
+    height: 40px;
+  }
+
+  #review-search::placeholder {
+    text-align: center;
+  }
+
+  .user-input {
+    width: 60%;
+    background-color: white;
+    margin: 25px auto;
+    padding: 15px;
+  }
+
+  #add-review-btn {
+    margin-top: 8%;
+  }
+
+  #add-review-btn:hover {
+    cursor: pointer;
+  }
+
+  #add-page-title {
+    width: 80%;
+    margin: 0 auto;
+    color: rgb(65, 62, 61);
+    font-size: 35px;
+    position: relative;
+    top: 8%;
+    text-align: center;
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+  .add-hoop-info {
+    width: 50%;
+    margin-top: 17px;
+  }
+
+  #footer {
+    height: 25vh;
+    width: 100vw;
+    background-color: rgb(246, 99, 53);
+  }
+
+  .socialIcons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .icons {
+    height: 30px;
+    width: 30px;
+    margin: 25px 20px 5px;
+  }
+
+  #emailInput input {
+    height: 33px;
+    width: 50%;
+    border: none;
+    border-radius: 1px;
+    margin-left: 10%;
+  }
+
+  #emailInput input::placeholder {
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(65, 62, 61);
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  #emailInput button {
+    display: inline;
+    margin-left: 5%;
+  }
+
+  .copyright {
+    font-family: Lato;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(65, 62, 61);
+    margin-top: 15px;
+  }
+}
