@@ -61,12 +61,12 @@ $(() => {
 //
 // });
 
-$('#review-search')
-  .keyup(function() {
-    let value = $( this ).val();
-    $('#review-park-name').text( value );
-  })
-  .keyup();
+$(document).ready(function(){
+  let newPark = $('#review-search').val();
+  $('#search-review-btn').click(function(){
+    $('#review-park-name').val(newPark);
+  });
+});
 
 
   // - make add page fill-in options with an array
