@@ -45,7 +45,10 @@ $(() => {
     }, 500)
   });
 
-
+  //Open new tab in gmail when clicking on email
+    $('#nav-contact').on('click', function(){
+  window.open('https://www.google.com/gmail/#', '_blank');
+    })
 
 
 //Hiding the mobile hamburger overlay
