@@ -60,9 +60,8 @@ $(() => {
 // $('#review-park-name').text(reviewSearch);
 //
 // });
-
+let newPark = $('#review-search').val();
 $(document).ready(function(){
-  let newPark = $('#review-search').val();
   $('#search-review-btn').click(function(){
     $('#review-park-name').val(newPark);
   });
