@@ -52,14 +52,21 @@ $(() => {
   //       };
 
 
-let reviewSearch = '';
-reviewSearch = $('#review-search').val();
+// let reviewSearch = '';
+// reviewSearch = $('#review-search').val();
+//
+// $('#search-review-btn').on('click', function(event){
+//   event.preventDefault();
+// $('#review-park-name').text(reviewSearch);
+//
+// });
 
-$('#search-review-btn').on('click', function(event){
-  event.preventDefault();
-$('#review-park-name').text(reviewSearch);
-
-});
+$('#review-search')
+  .keyup(function() {
+    let value = $( this ).val();
+    $('#review-park-name').text( value );
+  })
+  .keyup();
 
 
   // - make add page fill-in options with an array
