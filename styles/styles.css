@@ -166,7 +166,6 @@
     margin: 0 auto;
     position: relative;
     top: 15%;
-    background-image: url(<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d881124.6673036523!2d-123.06789959868236!3d37.860113091996986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808583a3a688d7b5%3A0x8c891b8457461fa9!2sSan%20Francisco%20Bay%20Area%2C%20CA!5e0!3m2!1sen!2sus!4v1588375668108!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>)
     /* background-image: url("../images/bay-area.png"); */
     background-size: cover;
     border-radius: 15px;
@@ -237,11 +236,48 @@
   }
 
   #add-review-btn {
-    margin-top: 10%;
+    /* margin-top: 10%; */
   }
 
   #add-review-btn:hover {
     cursor: pointer;
+  }
+
+  #add-overlay {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(74, 74, 79, .7);
+    display: none;
+  }
+
+  #add-overlay-page {
+    height: 30vh;
+    width: 40vw;
+    margin-top: 10%;
+    background-color: rgb(175, 175, 175);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 14px;
+    display: none;
+  }
+
+  #add-overlay-text {
+    width: 80%;
+    margin: 15% auto;
+    padding-top: 15%;
+    color: rgb(65, 62, 61);
+    font-size: 35px;
+    font-style: italic;
+    text-decoration: underline;
   }
 
   #add-page {
@@ -460,7 +496,7 @@
   }
 
   #add-review-btn {
-    margin-top: 8%;
+    margin-bottom: 38%;
   }
 
   #add-review-btn:hover {

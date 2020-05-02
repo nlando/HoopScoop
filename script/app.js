@@ -8,11 +8,11 @@ $(() => {
 
 
 
-  // - give all buttons actions
+  // - give all nav buttons actions
 
-  // $(document).on('click', '.page', (event) => {
-  //   $('#nav-overlay').hide();
-  // });
+  $(document).on('click', '.page', (event) => {
+    $('#nav-overlay').hide();
+  });
 
   $(document).on('click', '#menu-hamburger', (event) => {
     console.log('working');
@@ -45,27 +45,31 @@ $(() => {
     $('#nav-overlay').hide();
   });
 
+  //Update park name when searching for new park
+    $('#search-review-btn').on('click', function(event){
+      let reviewSearch = '';
+      reviewSearch = $('#review-search').val();
+      event.preventDefault();
+    $('#review-park-name').text(reviewSearch);
+    $('#review-search').val('');
+    });
 
-  // let reviewText = $('#review-search').val();
-  //       if(reviewText !== "") {
-  //           $('#review-park-name').text(reviewText);
-  //       };
+
+  //Update form when submitting with with new park info
 
 
-// let reviewSearch = '';
-// reviewSearch = $('#review-search').val();
-//
-// $('#search-review-btn').on('click', function(event){
-//   event.preventDefault();
-// $('#review-park-name').text(reviewSearch);
-//
-// });
-let newPark = $('#review-search').val();
-$(document).ready(function(){
-  $('#search-review-btn').click(function(){
-    $('#review-park-name').val(newPark);
+  $('#final-add-hoop-btn').on('click', function(event){
+  event.preventDefault();
+  $('#add-overlay').show();
+  $('#add-overlay-page').show();
   });
-});
+
+
+  //Hide "Add Overlay" function
+
+  $(document).on('click', '#add-overlay', (event) => {
+    $('#add-overlay').hide();
+  });
 
 
   // - make add page fill-in options with an array
@@ -83,27 +87,26 @@ $(document).ready(function(){
     };
 
 
-function initMap(){
-  navigator.geolocation.getCurrentPosition(function(position) {
-      // create an object to store lat/lng data
-      var userLocation = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-      var map = new google.maps.Map(document.getElementById('map'), {
-    center: userLocation,
-    zoom: 10,
-    scrollwheel: false
-  });
+    function initMap(){
+      navigator.geolocation.getCurrentPosition(function(position) {
+          // create an object to store lat/lng data
+          var userLocation = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          };
+          var map = new google.maps.Map(document.getElementById('map'), {
+        center: userLocation,
+        zoom: 10,
+        scrollwheel: false
+      });
 
-  var marker = new google.maps.Marker({
-      position: userLocation,
-      map: map,
-      title: 'User Location'
-    });
-    });
-  }
-  initMap();
-};
+      var marker = new google.maps.Marker({
+          position: userLocation,
+          map: map,
+          title: 'User Location'
+        });
+        });
+      }
+      initMap();
 
 });
