@@ -10,37 +10,45 @@ $(() => {
 
   // - give all nav buttons actions
 
-  $(document).on('click', '.page', (event) => {
+  $('.page').on('click', function() {
     $('#nav-overlay').hide();
   });
 
-  $(document).on('click', '#menu-hamburger', (event) => {
+//Mobile hamburger nav button
+  $('#menu-hamburger').on('click', function() {
     console.log('working');
     $('#nav-overlay').show();
     $('#nav-page').show();
   });
 
-  $(document).on('click', '#find-btn', (event) => {
+//Find hoops button
+  $('#find-btn').on('click', function() {
     console.log('working');
     $('html, body').animate({
       scrollTop: $('#find-page').offset().top
     }, 500)
   });
 
-  $(document).on('click', '#review-btn', (event) => {
+//Hoop reviews button
+  $('#review-btn').on('click', function() {
     console.log('working');
     $('html, body').animate({
       scrollTop: $('#review-page').offset().top
     }, 500)
   });
 
-  $(document).on('click', '#add-btn', (event) => {
+//Add hoop button
+  $('#add-btn').on('click', function() {
     console.log('working');
     $('html, body').animate({
       scrollTop: $('#add-page').offset().top
     }, 500)
   });
 
+
+
+
+//Hiding the mobile hamburger overlay
   $(document).on('click', '#nav-overlay', (event) => {
     $('#nav-overlay').hide();
   });
@@ -56,7 +64,6 @@ $(() => {
 
 
   //Update form when submitting with with new park info
-
 
   $('#final-add-hoop-btn').on('click', function(event){
   event.preventDefault();
@@ -86,7 +93,7 @@ $(() => {
       $('#add-form').append(inputElement);
     };
 
-
+//Google maps API
     function initMap(){
       navigator.geolocation.getCurrentPosition(function(position) {
           // create an object to store lat/lng data
