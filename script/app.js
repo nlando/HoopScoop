@@ -46,20 +46,20 @@ $(() => {
   });
 
 
-  let reviewText = $('#review-search').val();
-        if(reviewText !== "") {
-            $('#review-park-name').text(reviewText);
-        };
+  // let reviewText = $('#review-search').val();
+  //       if(reviewText !== "") {
+  //           $('#review-park-name').text(reviewText);
+  //       };
 
 
-// let reviewSearch = '';
-// reviewSearch = $('#review-search').value();
-//
-// $('#search-review-btn').on('click', function(event){
-//   event.preventDefault();
-// $('#review-park-name').value(reviewSearch);
-//
-// });
+let reviewSearch = '';
+reviewSearch = $('#review-search').val();
+
+$('#search-review-btn').on('click', function(event){
+  event.preventDefault();
+$('#review-park-name').text(reviewSearch);
+
+});
 
 
   // - make add page fill-in options with an array
