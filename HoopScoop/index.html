@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Hoop Scoop</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+  <main id='lander-page'>
+    <nav id='nav-bar'>
+      <div id='nav-items'>
+        <ul id='nav-content'>
+          <li id='find-btn'>Hoops Near You</li>
+          <li id='review-btn'>Hoop Reviews</li>
+          <li id='add-btn'>Add a Hoop</li>
+        </ul>
+        <ul id='nav-contact'>
+          <li>Contact: nick@thehoopscoop.com</li>
+        </ul>
+      </div>
+    </nav>
+    <section class='page' id='lander-header'>
+      <img id="menu-hamburger" src="icons/hamburger.svg" alt="Hamburger" role="navigation">
+      <h1 id='lander-title'>The Hoop Scoop</h1>
+      <img id='basketball-icon' src="icons/basketball.png" alt="basketball">
+      <img id='hoop-photo' src="images/hoop-photo.jpg" alt="hoop-photo">
+      <h3 id='lander-subtitle'>Find your local hoops.</h3>
+    </section>
+  </main>
+  <aside id='nav-overlay'>
+    <section id='nav-page'>
+      <h2 id='nav-page-title'>Find the local hoop spot.</h2>
+      <div id="nav-btns">
+        <button class='border' id='find-btn' type="button" name="hoops near you">Hoops Near You</button>
+        <button class='border' id='review-btn' type="button" name="hoop reviews">Hoop Reviews</button>
+        <button class='border' id='add-btn' type="button" name="add a hoop">Add a Hoop</button>
+      </div>
+    </section>
+  </aside>
+  <section class='page' id='find-page'>
+    <h2 id='find-page-title'>Hoops Near You</h2>
+    <div id='hoop-map'>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d881124.6673036523!2d-123.06789959868236!3d37.860113091996986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808583a3a688d7b5%3A0x8c891b8457461fa9!2sSan%20Francisco%20Bay%20Area%2C%20CA!5e0!3m2!1sen!2sus!4v1588375668108!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <aside class='border' id='find-results'>
+      <ul>
+        <li class='park-name'>(# of stars) name of park</li>
+        <li class='park-address'># of hoops</li>
+        <li class='number-of-hoops'>address</li>
+      </ul>
+    </aside>
+  </section>
+  <section id='review-page' class='page fade'>
+    <div id='review-header' class='fade'>
+      <h2 id='review-page-title' class='fade'>Reviews</h2>
+      <h3 id='reviews-subtitle'>See what hoopers are saying.</h3>
+      <input id='review-search' class='border' type='text' name='review-search' placeholder='Type Name of Park Here...'>
+      <button id='search-review-btn' class='gray-btn border' type="button" name="search review button">Search</button>
+    </div>
+    <div id='review-results'>
+      <h3 id='review-park-name' class='border'>San Pablo Park: 3.8 ⭐️</h3>
+      <section id='user-reviews'>
+        <h4 class='user-input border'>5⭐️- Chain nets - the best sound of splashing! Not a ton of parking, but love biking there anyway</h4>
+        <h4 class='user-input border'>2⭐️- Get there early if you want a spot. Also, one of the four hoops didn't have a net. Bogus.</h4>
+        <h4 class='user-input border'>4⭐️- Pickup game on one of the courts starts at 9am every Saturday. Saw a lot of street parking around, and there's a great park for kids nearby!</h4>
+      </section>
+      <button id='add-review-btn' class='gray-btn border' type="button" name="add-review">Add Review</button>
+    </div>
+  </section>
+  <section class='page' id='add-page'>
+    <div id='review-header'>
+      <h2 id='add-page-title'>Add a Hoop</h2>
+      <h3 id='add-subtitle'>Put a hoop on the map.</h3>
+      <form id='add-form'>
+        <select class='add-hoop-info border' name='num-of-hoops'>
+          <option value=''>Select # of hoops</option>
+          <option value='1'>1</option>
+          <option value='2'>2</option>
+          <option value='3'>3</option>
+          <option value='4'>4</option>
+          <option value='5'>5</option>
+          <option value='6'>6</option>
+          <option value='7'>7</option>
+          <option value='8'>8</option>
+          <option value='9'>9</option>
+          <option value='10+'>10+</option>
+        </select>
+      </form>
+      <aside id='add-overlay'>
+        <section id='add-overlay-page'>
+          <h2 id='add-overlay-text'>Hoop Submitted!</h2>
+        </section>
+      </aside>
+      <button id='final-add-hoop-btn' class='orange-btn border' type="button" name="final-add-hoop-btn">Add Hoop</button>
+  </section>
+  <footer>
+    <div class='page' id="footer">
+      <div class="socialIcons">
+        <div>
+          <img src="icons/facebook.png" alt="facebook" class="icons">
+          <img src="icons/twitter.png" alt="twitter" class="icons">
+          <img src="icons/instagram.png" alt="instagram" class="icons">
+        </div>
+      </div>
+      <div id='emailInput' class='textCenter'>
+        <input class='border' type="text" placeholder="Email Address">
+        <button id='email-btn' class="gray-btn border">Subscribe</button>
+      </div>
+      <div class="copyright">
+        &copy;2020 Nick Landon
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src='script/app.js' type="text/javascript"></script>
+</body>
+
+</html>
