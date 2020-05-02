@@ -77,7 +77,7 @@ $(() => {
   //when each input field has at least one letter, add the next field
   //only make #final-add-hoop-btn clickable when all field are filled
 
-  let addForm = ['Park/Location Name', 'Address', 'First Name', 'Last Name', 'Email Address'];
+  let addForm = ['Park/Location Name', 'Address', 'Name(First)', 'Name(Last)', 'Email-Address'];
   let textElement = '';
     for (let i = 0; i < addForm.length; i++) {
       let inputElement = `<input class= 'add-hoop-info border' type = 'text'
