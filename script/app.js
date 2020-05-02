@@ -14,11 +14,11 @@ $(() => {
   //   $('#nav-overlay').hide();
   // });
 
-  $(document).on('click', '#menu-hamburger', (event) => {
-    console.log('working');
-    $('#nav-overlay').show();
-    $('#nav-page').show();
-  });
+  // $(document).on('click', '#menu-hamburger', (event) => {
+  //   console.log('working');
+  //   $('#nav-overlay').show();
+  //   $('#nav-page').show();
+  // });
 
   $(document).on('click', '#find-btn', (event) => {
     console.log('working');
