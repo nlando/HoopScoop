@@ -116,6 +116,30 @@
     </div>
   </footer>
 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCFlFDyFeX5RTDLaZPVxs6XEG1hU8PwgE0",
+      authDomain: "thehoopscoop-c318c.firebaseapp.com",
+      databaseURL: "https://thehoopscoop-c318c.firebaseio.com",
+      projectId: "thehoopscoop-c318c",
+      storageBucket: "thehoopscoop-c318c.appspot.com",
+      messagingSenderId: "894275229912",
+      appId: "1:894275229912:web:0ccf543402177b29d1dfad",
+      measurementId: "G-RYH9FXBSPL"
+    };
+    // Initialize Firebase
+    
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src='script/app.js' type="text/javascript"></script>
 </body>
